@@ -575,8 +575,10 @@ outfit-agent/
     ├── main.py            ← 程式入口：讀設定、連上 Discord、啟動處理員和排程
     ├── config.py          ← 讀取並檢查 .env
     ├── bot.py             ← 收訊息、加 ⏳、排隊、指令分派、回覆
-    ├── analyzer.py        ← 呼叫 claude -p、解析與檢查 JSON（防護 1、2、3）
-    ├── storage.py         ← 存照片與檔名清洗（防護 3）、讀寫 Excel（防護 4）
+    ├── guards.py          ← 四段安全防護，每段用「開始 / 結束」註解包起來
+    ├── analyzer.py        ← 準備照片、呼叫 claude -p（透過 guards.py）
+    ├── models.py          ← 固定選項（類型、顏色）與資料型態
+    ├── storage.py         ← 存照片、讀寫 Excel
     ├── stats.py           ← 第 N 次穿、顏色前三名、冷宮、每週摘要的計算
     ├── chart.py           ← 畫長條圖
     └── weekly.py          ← 每週提醒排程與補發

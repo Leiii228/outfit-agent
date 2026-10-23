@@ -1,0 +1,22 @@
+[project]
+name = "outfit-agent"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = 'LEI\User', email = "411232058@gms.ndhu.edu.tw" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "discord-py>=2.7.1",
+    "matplotlib>=3.11.2",
+    "openpyxl>=3.1.5",
+    "pillow>=13.0.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+outfit-agent = "outfit_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"

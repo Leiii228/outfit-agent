@@ -330,7 +330,7 @@ class OutfitBot(discord.Client):
             return
         cold = stats.cold_items(mine, local_now())
         if not cold:
-            await self._reply(message, f"目前沒有超過 {stats.COLD_DAYS} 天沒穿的單品 👍")
+            await self._reply(message, "目前沒有打入冷宮的單品 👍")
             return
         lines = [f"這些單品超過 {stats.COLD_DAYS} 天沒穿了："]
         lines += [f"・{t}/{c}　上次是 {days} 天前" for t, c, days in cold]
